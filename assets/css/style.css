@@ -178,3 +178,28 @@ footer {
     font-size: 12px;
     margin-right: 4px;
 }
+.contact-wrap h2 {
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.contact-wrap input,.contact-wrap textarea  {
+    border: 1px solid #d5d6de;
+    height: 50px;
+    width: 100%;
+    padding: 14px;
+    margin: 1.5rem 0;
+}
+::placeholder {
+    color: #595959;
+}
+.contact-wrap textarea {
+    height: 210px;
+}
+.small-text {
+    font-size: 14px;
+    color: #a7a9b8;
+}
+.float-right {
+    float: right;
+}
