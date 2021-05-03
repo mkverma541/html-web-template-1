@@ -17,8 +17,74 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.7;
+    overflow-x: hiddens;
 }
-.main-heading {
+.creative-btn {
+    background: var(--primary-color);
+    padding: 20px 10px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 135px;
+}
+.creative-btn span {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 1.8rem;
+    transition: 0.5s;   
+}
+.creative-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background: #000;
+    transition: 0.5s ease-in-out;
+}
+.creative-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100%;
+    background: #000;
+    transition: 0.5s ease-in-out;
+}
+.creative-btn:hover::before,
+.creative-btn:hover::after{
+    width: 50%;
+}
+.creative-btn span:nth-child(1){
+    transition-delay: 0.75s;
+}
+.creative-btn:hover span:nth-child(1){
+    transform: scale(0);
+    transition-delay: 0s;
+}
+.creative-btn span:nth-child(2) {
+    transform: scale(3);
+    opacity: 0;
+    color: #fff;
+    transition-delay: 0s;
+}
+.creative-btn:hover span:nth-child(2) {
+    transform: scale(1);
+    transition-delay: 0s;
+    opacity: 1;
+    z-index: 10;
+    transition-delay: 0.5s;
+}
+ .main-heading {
     font-size: 3.5rem;
     line-height: 1.5;
     font-weight: 700;
@@ -107,6 +173,7 @@ body {
 }
 .portfolio-details {
     background: #ddd;
+    position: relative;
 }
 .portfolio .image-wrap {
     margin: 3rem auto;
@@ -146,6 +213,10 @@ footer {
     background-color: #010413;
     padding: 6rem 0 3rem;
     color: #fff;
+}
+footer address a {
+    color: #fff;
+    text-decoration: none;
 }
 .widget .title {
     text-transform: uppercase;
@@ -212,4 +283,15 @@ footer {
 .cta h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+.close-toggle {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+
+.close-toggle img {
+    max-width: 30px;
+    height: auto;
+    float: right;
 }
